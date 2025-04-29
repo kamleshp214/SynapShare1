@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-50 dark:bg-gray-950 text-gray-800 dark:text-gray-200 font-['Poppins'];
+}
+
+.container {
+  @apply max-w-7xl mx-auto p-6 lg:p-10;
+}
+
+.btn-primary {
+  @apply bg-blue-600 dark:bg-indigo-600 text-white py-2 px-6 rounded-xl hover:bg-blue-700 dark:hover:bg-indigo-700 transition-all duration-300 shadow-lg;
+}
+
+.card {
+  @apply bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm p-6 rounded-xl shadow-xl border border-gray-200/30 dark:border-gray-800/30 hover:scale-105 transition-all duration-300;
+}
+
+.navbar {
+  @apply bg-gray-900/90 backdrop-blur-md py-3 shadow-lg;
+}
+
+.nav-link {
+  @apply text-white font-semibold hover:text-amber-400 hover:underline transition-all duration-200 flex items-center space-x-2 text-base;
+}
+
+.footer {
+  @apply bg-gray-900/90 backdrop-blur-md py-2 shadow-lg;
+}
+
+.footer-text {
+  @apply text-gray-400 text-xs;
+}
+
+.footer-icon {
+  @apply text-white hover:text-amber-400 hover:drop-shadow-[0_0_8px_rgba(251,191,36,0.8)] transition-all duration-200;
+}
+
+.toggle-switch {
+  @apply relative inline-flex items-center h-6 rounded-full w-11 bg-gray-700;
+}
+
+.toggle-switch input {
+  @apply sr-only;
+}
+
+.toggle-switch .slider {
+  @apply absolute inset-0 rounded-full transition-all duration-300 cursor-pointer;
+}
+
+.toggle-switch input:checked + .slider {
+  @apply bg-blue-600;
+}
+
+.toggle-switch .slider::before {
+  @apply absolute content-[''] h-4 w-4 left-1 bottom-1 bg-white rounded-full transition-all duration-300;
+}
+
+.toggle-switch input:checked + .slider::before {
+  @apply transform translate-x-5;
+}
